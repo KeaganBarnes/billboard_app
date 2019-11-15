@@ -1,0 +1,17 @@
+<%= form_with(model: @artist, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Artist's Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :genre %>
+    <%= f.text_field :genre, placeholder: "Metal, Rock, Rap, Pop, etc,..." %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio, placeholder: "A brief biography about the Artist..." %>
+  <br />
+    <%= f.submit class: "ui button" %>
+  </div>
+
+  <% end %>

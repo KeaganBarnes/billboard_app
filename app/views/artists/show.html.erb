@@ -1,0 +1,29 @@
+<%= link_to "Home", artists_path %>
+<h1 class="ui header"><%= @artist.name %></h1>
+<h4> <%= @artist.genre%> </h4>
+<p> <%= @artist.bio %> </p>
+<%= link_to "Edit Artist", edit_artist_path %>
+<hr />
+<h3> Songs </h3>
+<%= link_to "Add New Song", new_artist_song_path(@artist) %>
+
+<table class="ui striped table">
+  <thead>
+    <tr class="center aligned">
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @songs.each do |song| %>
+
+      <tr class="center aligned">
+
+        <td><%= song.name %></td>
+        <td><%= link_to "Edit", edit_artist_song_path(@artist, song) %></td>
+        <td><%= link_to "Delete", artist_song_path(@artist, song), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

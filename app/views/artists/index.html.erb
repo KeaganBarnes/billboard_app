@@ -1,0 +1,22 @@
+<h1 class="ui header">Artists</h1>
+<%= link_to "New Artist", new_artist_path %>
+<hr />
+
+<table class="ui striped table">
+  <thead>
+    <tr class="center aligned">
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr class="center aligned">
+      <td><%= artist.name %></td>
+      <td><%= artist.genre %></td>
+      <td><%= link_to "View", artist_path(artist) %></td>
+      <td><%= link_to "Remove", artist_path(artist), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
