@@ -3,7 +3,7 @@
 <h4> <%= @artist.genre%> </h4>
 <p> <%= @artist.bio %> </p>
 <%= link_to "Edit Artist", edit_artist_path %>
-<hr />
+<div class="ui divider"></div>
 <h3> Songs </h3>
 <%= link_to "Add New Song", new_artist_song_path(@artist) %>
 

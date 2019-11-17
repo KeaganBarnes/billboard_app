@@ -1,6 +1,7 @@
 <h1 class="ui header">Artists</h1>
+<%= link_to "Back To Billboard", billboards_path %> |
 <%= link_to "New Artist", new_artist_path %>
-<hr />
+<div class="ui divider"></div>
 
 <table class="ui striped table">
   <thead>
@@ -11,11 +12,13 @@
   
   <tbody>
     <% @artists.each do |artist| %>
+
       <tr class="center aligned">
-      <td><%= artist.name %></td>
-      <td><%= artist.genre %></td>
-      <td><%= link_to "View", artist_path(artist) %></td>
-      <td><%= link_to "Remove", artist_path(artist), method: :delete %></td>
+        <td><%= artist.name %></td>
+        <td><%= artist.genre %></td>
+
+        <td><%= link_to "View", artist_path(artist) %></td>
+        <td><%= link_to "Remove", artist_path(artist), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

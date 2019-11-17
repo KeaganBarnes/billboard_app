@@ -4,10 +4,12 @@ one:
   name: MyString
   genre: MyString
   album: MyString
+  billboard: one
   artist: one
 
 two:
   name: MyString
   genre: MyString
   album: MyString
+  billboard: two
   artist: two
