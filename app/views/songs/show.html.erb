@@ -1,7 +1,8 @@
-<h1 class="ui header"> <%= @song.name%> </h1>
-<h3> Album: <%= @song.album%> </h3>
-<h3> Genre: <%= @song.genre%> </h3>
-<h2> <%= @artist.name%> </h2>
+<h1 class="ui grey inverted header"> <%= @song.name%> </h1>
+<h3 class="ui grey inverted header"> Album: <%= @song.album%> </h3>
+<h3 class="ui grey inverted header"> Genre: <%= @song.genre%> </h3>
+<h2 class="ui grey inverted header"> By: <%= @artist.name%> </h2>
 
-<%= link_to "View Artist", @artist %>
+<%= link_to "View Artist", @artist %> |
 <%= link_to "Home", artists_path %>
+</div>

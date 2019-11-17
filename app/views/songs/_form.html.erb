@@ -1,15 +1,15 @@
-  <h1><%= @song.id ? 'Edit Song' : 'Song Info' %></h1>
+  <h1 class="ui grey inverted header"><%= @song.id ? 'Edit Song' : 'Song Info' %></h1>
 <hr />
 <%= form_with(model: [@artist, @song], local: true, class: "ui form") do |f| %>
-  <%= f.label :name %>
+  <p class="ui grey inverted header"> <%= f.label :name %> </p>
   <%= f.text_field :name, required: true, autofocus: true, placeholder: "Song Name" %>
   <br />
-  <%= f.label :genre %>
+  <p class="ui grey inverted header"> <%= f.label :genre %> </p>
   <%= f.text_field :genre, placeholder: "Metal, Rock, Rap, Pop, etc,..." %>
   <br />
-  <%= f.label :album %>
+  <p class="ui grey inverted header"> <%= f.label :album %> </p>
   <%= f.text_field :album, placeholder: "Album This Song Appeared On" %>
   <br />
   <br />
-  <%= f.submit nil, class: "ui button" %>
+  <%= f.submit nil, class: "ui inverted blue basic button" %>
 <% end %>

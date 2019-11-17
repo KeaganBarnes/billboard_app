@@ -1,4 +1,4 @@
-<h1 class="ui header"> Billboard</h1>
+<h1 class="ui grey inverted header"> Billboard</h1>
 <h4> <%= @billboard.name%> </h4>
 <div class="ui divider"></div>
 <h3> Top 100 </h3>
@@ -12,7 +12,7 @@
   </thead>
   
   <tbody>
-    <% @songs.each do |song| %>
+    <% @artists.songs.each do |song| %>
 
       <tr class="center aligned">
   

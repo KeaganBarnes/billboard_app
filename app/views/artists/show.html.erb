@@ -1,13 +1,13 @@
-<%= link_to "Back To Artists", artists_path %>
-<h1 class="ui header"><%= @artist.name %></h1>
-<h4> <%= @artist.genre%> </h4>
-<p> <%= @artist.bio %> </p>
-<%= link_to "Edit Artist", edit_artist_path %>
+<%= link_to "|Back To Artists|", artists_path %>
+<h1 class="ui grey inverted header"><%= @artist.name %></h1>
+<h4 class="ui grey inverted header"> <%= @artist.genre%> </h4>
+<p class="ui grey inverted header"> <%= @artist.bio %> </p>
+<%= link_to "|Edit Artist|", edit_artist_path %>
 <div class="ui divider"></div>
-<h3> Songs </h3>
-<%= link_to "Add New Song", new_artist_song_path(@artist) %>
+<h3 class="ui grey inverted header"> Songs </h3>
+<%= link_to "|Add New Song|", new_artist_song_path(@artist) %>
 
-<table class="ui striped table">
+<table class="ui selectable inverted table">
   <thead>
     <tr class="center aligned">
       <th colspan="4"></th>
@@ -15,11 +15,12 @@
   </thead>
   
   <tbody>
-    <% @songs.each do |song| %>
+    <% @artist.songs.each do |song| %>
 
       <tr class="center aligned">
 
         <td><%= song.name %></td>
+        <td><%= song.genre %></td>
         <td><%= link_to "Edit", edit_artist_song_path(@artist, song) %></td>
         <td><%= link_to "Delete", artist_song_path(@artist, song), method: :delete %></td>
       </tr>

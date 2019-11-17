@@ -1,11 +1,12 @@
-<h1 class="ui header"> Billboard</h1>
-<h2> Top 100</h2>
+<h1 class="ui grey inverted header"> Billboard</h1>
+<h2 class="ui grey inverted header"> Top 100</h2>
 <div class="ui divider"></div>
 
-<%= link_to "View Artists", artists_path(@artists) %> |
-<%= link_to "Add New Artist", new_artist_path(@artists) %>
+<%= link_to "|View Artists|", artists_path(@artists) %> |
+<%= link_to "|Add New Artist|", new_artist_path(@artists) %> |
+<%= link_to "|Add Song|", new_billboard_song_path(@songs) %> 
 
-<table class="ui striped table">
+<table class="ui selectable inverted table">
   <thead>
     <tr class="center aligned">
       <th colspan="4"></th>
@@ -15,7 +16,7 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr class="center aligned">
-        <td> Song ranking </td>
+        
         <td><%= song.name %></td>
         <td><%= song.genre %></td>
         <td><%= song.artist %></td>
