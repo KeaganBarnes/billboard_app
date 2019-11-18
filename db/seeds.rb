@@ -1,19 +1,9 @@
-require 'faker'
-include Faker
+# songs = Song.all
 
-10.times do
-  Artist.create
-    name: Faker::Music.band,
-    genre: Faker::Music.genre
+# 10.times do
+# i = rand(songs.length)
+#   songs[i].billboard_id
+#   songs[i].save
+#   songs -= songs[i]
 
-
-100.times do
-  Song.create
-    name: Faker::Name.name,
-    genre: Faker::Music.genre,
-    album: Faker::Music.album
-  
-end
-
-
-Collapse
+# end

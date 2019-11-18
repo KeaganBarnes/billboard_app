@@ -3,7 +3,8 @@
 <%= link_to "|New Artist|", new_artist_path %>
 <div class="ui divider"></div>
 
-<table class="ui selectable inverted table">
+<table class="ui selectable inverted table" >
+
   <thead>
     <tr class="center aligned">
       <th colspan="4"></th>
@@ -11,9 +12,10 @@
   </thead>
   
   <tbody>
-    <% @artists.each do |artist| %>
+    <% @artists.each_with_index do |artist, index| %>
 
       <tr class="center aligned">
+        <td><%= (index+1) %></td>
         <td><%= artist.name %></td>
         <td><%= artist.genre %></td>
 
